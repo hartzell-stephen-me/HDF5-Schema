@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hdf5schema"
+dynamic = ["version"]
+description = "HDF5 Schema is Python library for defining schemas for HDF5 files and verifying compliance."
+readme = "readme.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Stephen Hartzell", email = "hartzell.stephen@gmail.com"}
+    {name = "Grant Guernsey", email = "gdguernsey@gmail.com"}
+]
+maintainers = [
+    {name = "Stephen Hartzell", email = "hartzell.stephen@gmail.com"}
+]
+keywords = ["HDF5", "schema", "verification", "scientific"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Image Processing",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Environment :: X11 Applications :: Qt",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "jsonschema",
+    "h5py",
+    "numpy",
+]
+
+[project.urls]
+Homepage = "https://github.com/hartzell-stephen-me/hdf5schema"
+Repository = "https://github.com/hartzell-stephen-me/hdf5schema"
+Issues = "https://github.com/hartzell-stephen-me/hdf5schema/issues"
+
+[tool.setuptools]
+packages = {find = {}}  # Automatically find all packages under hdf5schema
+
+[tool.setuptools.dynamic]
+version = {attr = "hdf5schema.__version__"}
+
+[tool.setuptools.package-data]
+hdf5schema = ["docs/images/*.png", "docs/images/*.jpg"]

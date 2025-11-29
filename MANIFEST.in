@@ -1,0 +1,11 @@
+# Include documentation and metadata files
+include README.md
+include readme.md
+include LICENSE
+include CITATION.cff
+
+# Exclude compiled Python files and caches
+global-exclude *.py[cod]
+global-exclude __pycache__
+global-exclude *.so
+global-exclude .DS_Store

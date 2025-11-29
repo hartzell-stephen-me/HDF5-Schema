@@ -1,0 +1,21 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: HDF5 Schema
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Stephen
+    family-names: Hartzell
+    email: hartzell.stephen@gmail.com
+identifiers:
+repository-code: 'https://github.com/hartzell-stephen-me/hdf5schema'
+url: 'https://github.com/hartzell-stephen-me/hdf5schema'
+abstract: >-
+  HDF5 Schema is Python library for defining schemas for HDF5 files and verifying compliance.
+keywords:
+  - HDFF5
+license: MIT

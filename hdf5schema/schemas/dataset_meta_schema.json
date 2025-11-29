@@ -1,0 +1,166 @@
+{
+    "type": "object",
+    "properties": {
+        "type": {
+            "pattern": "dataset"
+        },
+        "description": {
+            "type": "string"
+        },
+        "dtype": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "formats": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "format": {
+                                        "type": "string"
+                                    },
+                                    "offset": {
+                                        "type": "number"
+                                    }
+                                },
+                                "required": [
+                                    "name",
+                                    "format"
+                                ],
+                                "additionalProperties": false
+                            }
+                        },
+                        "itemsize": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "formats"
+                    ]
+                }
+            ]
+        },
+        "attrs": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "dtype": {
+                        "type": "string"
+                    },
+                    "shape": {
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "name"
+                ]
+            }
+        },
+        "shape": {
+            "type": "array"
+        },
+        "dependentRequired": {
+            "type": "object",
+            "description": "Properties that are required when other properties are present",
+            "additionalProperties": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                },
+                "uniqueItems": true
+            }
+        },
+        "dependentSchemas": {
+            "type": "object",
+            "description": "Schemas to apply when specific properties are present",
+            "additionalProperties": {
+                "type": "object"
+            }
+        },
+        "anyOf": {
+            "type": "array",
+            "items": {
+                "type": "object"
+            }
+        },
+        "allOf": {
+            "type": "array",
+            "items": {
+                "type": "object"
+            }
+        },
+        "oneOf": {
+            "type": "array",
+            "items": {
+                "type": "object"
+            }
+        },
+        "not": {
+            "type": "object",
+            "description": "The schema must not be satisfied"
+        },
+        "$comment": {
+            "type": "string",
+            "description": "JSON Schema comment"
+        },
+        "enum": {
+            "type": "array",
+            "items": {}
+        },
+        "const": {},
+        "$defs": {
+            "type": "object",
+            "description": "JSON Schema definitions for recursive references"
+        },
+        "$ref": {
+            "type": "string",
+            "description": "JSON Schema reference to a definition"
+        },
+        "if": {
+            "type": "object",
+            "description": "JSON Schema conditional"
+        },
+        "then": {
+            "type": "object",
+            "description": "JSON Schema conditional consequence"
+        },
+        "else": {
+            "type": "object",
+            "description": "JSON Schema conditional alternative consequence"
+        },
+        "format": {
+            "type": "string",
+            "description": "String format validation (e.g., email, uri, date-time)",
+            "enum": ["date-time", "date", "time", "email", "hostname", "ipv4", "ipv6", "uri", "uuid", "regex"]
+        },
+        "minLength": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Minimum string length"
+        },
+        "maxLength": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Maximum string length"
+        },
+        "pattern": {
+            "type": "string",
+            "description": "Regular expression pattern for string validation"
+        }
+    },
+    "required": [
+        "type"
+    ],
+    "additionalProperties": false
+}
