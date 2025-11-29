@@ -1,9 +1,10 @@
 import h5py
 import pathlib
-from typing import Union
-from hdf5schema.validator import Hdf5Validator
 import typer
 from pathlib import Path
+from typing import Union
+
+from hdf5schema.validator import Hdf5Validator
 
 def validate(
     instance: Union[pathlib.Path, str, h5py.File, h5py.Group],
@@ -38,6 +39,11 @@ def validate(
 
     return validator.is_valid()
 
+
+app = typer.Typer()
+
+
+@app.command()
 def main(
     hdf5_file: str = typer.Argument(..., help="Path to the HDF5 file to validate"),
     schema_file: str = typer.Argument(..., help="Path to the JSON schema file"),
@@ -83,5 +89,6 @@ def main(
             typer.echo(traceback.format_exc(), err=True)
         raise typer.Exit(1)
 
+
 if __name__ == "__main__":
-    typer.run(main)
+    app()

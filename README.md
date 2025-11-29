@@ -1247,7 +1247,8 @@ python -m pytest
 
 ## About
 
-The author of this Python package is Stephen Hartzell. Stephen got tired of writing one-off solutions to compare HDF5 files to a schema and wrote this package to solve this problem for himself and hopefully others.
+The author of this Python package is Stephen Hartzell. Stephen got tired of writing one-off solutions to compare HDF5 
+files to a schema and wrote this package to solve this problem for himself and hopefully others.
 
 `hdf5schema` is on [GitHub](https://github.com/python-hdf5schema/hdf5schema).
 

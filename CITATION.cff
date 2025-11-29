@@ -11,6 +11,9 @@ authors:
   - given-names: Stephen
     family-names: Hartzell
     email: hartzell.stephen@gmail.com
+  - given-names: Grant
+    family-names: Guernsey
+    email: gd.guernsey@gmail.com
 identifiers:
 repository-code: 'https://github.com/hartzell-stephen-me/hdf5schema'
 url: 'https://github.com/hartzell-stephen-me/hdf5schema'

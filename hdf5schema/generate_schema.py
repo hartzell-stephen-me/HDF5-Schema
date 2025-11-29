@@ -7,11 +7,11 @@ as needed.
 """
 import json
 import pathlib
+import typer
 from typing import Any, Dict, List, Optional
 
 import h5py
 import numpy as np
-import typer
 
 
 def _dtype_to_schema(dtype: np.dtype) -> Any:
@@ -137,6 +137,10 @@ def generate_schema(
         return _group_to_schema(grp)
 
 
+app = typer.Typer()
+
+
+@app.command()
 def main(
     input_file: pathlib.Path = typer.Argument(..., help="Path to input .h5/.hdf5 file"),
     group: Optional[str] = typer.Option(None, "-g", "--group", help="HDF5 group path to use as root (default: /)"),
@@ -170,4 +174,4 @@ def main(
 
 
 if __name__ == "__main__":
-    typer.run(main)
+    app()
