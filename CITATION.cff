@@ -17,5 +17,5 @@ url: 'https://github.com/hartzell-stephen-me/hdf5schema'
 abstract: >-
   HDF5 Schema is Python library for defining schemas for HDF5 files and verifying compliance.
 keywords:
-  - HDFF5
+  - HDF5
 license: MIT

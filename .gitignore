@@ -161,3 +161,7 @@ _templates
 # Test Data
 tests/data/*
 *.h5
+
+# claude folder
+.claude/*
+CLAUDE.md

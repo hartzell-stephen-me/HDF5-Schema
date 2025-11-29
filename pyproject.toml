@@ -6,10 +6,10 @@ build-backend = "setuptools.build_meta"
 name = "hdf5schema"
 dynamic = ["version"]
 description = "HDF5 Schema is Python library for defining schemas for HDF5 files and verifying compliance."
-readme = "readme.md"
+readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "Stephen Hartzell", email = "hartzell.stephen@gmail.com"}
+    {name = "Stephen Hartzell", email = "hartzell.stephen@gmail.com"},
     {name = "Grant Guernsey", email = "gdguernsey@gmail.com"}
 ]
 maintainers = [
