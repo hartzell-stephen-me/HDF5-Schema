@@ -51,6 +51,9 @@ hdf5schema-generate = "hdf5schema.generate_schema:app"
 [tool.setuptools]
 packages = {find = {}}  # Automatically find all packages under hdf5schema
 
+[tool.setuptools.packages.find]
+exclude = ["docs", "examples", "tests"]
+
 [tool.setuptools.dynamic]
 version = {attr = "hdf5schema.__version__"}
 
