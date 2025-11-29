@@ -48,11 +48,8 @@ Issues = "https://github.com/hartzell-stephen-me/hdf5schema/issues"
 hdf5schema-validate = "hdf5schema.validate:app"
 hdf5schema-generate = "hdf5schema.generate_schema:app"
 
-[tool.setuptools]
-packages = {find = {}}  # Automatically find all packages under hdf5schema
-
 [tool.setuptools.packages.find]
-exclude = ["docs", "examples", "tests"]
+exclude = ["docs*", "examples*", "tests*"]
 
 [tool.setuptools.dynamic]
 version = {attr = "hdf5schema.__version__"}
