@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2025-11-29
+
+### Fixes
+- Fixed bug with TOML that was not including meta schemas and was including unncessary directories.
+
 ## [1.0.0] - 2025-11-29
 
 ### Added
@@ -38,4 +43,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CITATION.cff for academic citation
 - CLAUDE.md for development guidelines
 
+[1.0.1]: https://github.com/hartzell-stephen-me/hdf5schema/releases/tag/1.0.1
 [1.0.0]: https://github.com/hartzell-stephen-me/hdf5schema/releases/tag/1.0.0
